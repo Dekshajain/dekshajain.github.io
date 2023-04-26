@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Transition</title>
+<style>
+.bigbox{
+    background-image: url(old.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+.smallbox{
+    width: 500px;
+    height:500px;
+    position: absolute;
+    bottom: -500px;
+    background-image: url(new.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bigbox:hover .smallbox{
+    bottom: 0;
+    transition: linear 1s;
+}
+</style>
+</head>
+<body>
+  <div class="bigbox">
+    <div class="smallbox"></div>
+  </div>  
+</body>
+</html>
